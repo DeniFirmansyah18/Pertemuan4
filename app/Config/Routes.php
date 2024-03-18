@@ -9,4 +9,6 @@ $routes->get('/', 'Page::index');
 
 $routes->get('/', 'Page::about');
 
+$routes->get('/', 'Page::contact');
+
 //$routes->setAutoRoute(true);

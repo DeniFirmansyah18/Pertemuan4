@@ -10,9 +10,7 @@ class Page extends BaseController
             'title' => 'Home | Unipdu Press',
             'tes' => ['satu', 'dua', 'tiga']
         ];
-        echo view('layout/header', $data);
         echo view('page/home', $data);
-        echo view('layout/footer');
     }
 
     public function about()
@@ -21,8 +19,18 @@ class Page extends BaseController
             'title' => 'Home | Unipdu Press',
             'tes' => ['satu', 'dua', 'tiga']
         ];
-        echo view('layout/header', $data);
-        echo view('page/about');
-        echo view('layout/footer');
+        echo view('page/about', $data);
+    }
+
+    public function contact()
+    {
+        $data = [
+            'title' => 'Contact | Unipdu Press',
+            'alamat' => [
+                ['tipe' => 'Rumah', 'alamat' => 'Desa Peterongan no 28', 'kota' => 'Jombang'],
+                ['tipe' => 'Kantor', 'alamat' => 'Kompleks Ponpes Darul Ulum Peterongan', 'kota' => 'Jombang']
+            ]
+        ];
+        echo view('page/contact', $data);
     }
 }
